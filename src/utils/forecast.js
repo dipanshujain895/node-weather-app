@@ -13,7 +13,8 @@ const getForecast = (latitude, longitude, callback) => {
         else {
             const weatherData = body.currently;
             const weeklyData = body.daily.data;
-            const forecast = weeklyData[0].summary+" It is "+weatherData.temperature+" degrees out there. There is "+weatherData.precipProbability+"% chance of rain";
+
+            const forecast = weeklyData[0].summary + ' It is currently ' + weatherData.temperature + ' degress out. This high today is ' + weeklyData[0].temperatureHigh + ' with a low of ' + weeklyData[0].temperatureLow + '. There is a ' + weatherData.precipProbability + '% chance of rain.';
             callback(undefined, forecast);
         }
     });
