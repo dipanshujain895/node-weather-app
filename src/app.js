@@ -2,7 +2,8 @@ const path = require('path');
 const express = require('express');
 const hbs = require('hbs');
 
-const app = express()
+const app = express();
+const port = process.env.PORT || 2244;  //getting from heroku
 
 // Define paths for Express config
 const publicDir = path.join(__dirname, '../public');
@@ -100,6 +101,7 @@ app.get('*', (req, res) => {
     });
 });
 
-app.listen(2244, () => {
-    console.log("Server running at http://localhost:2244");
+//We need to specify the port in app.listen from the heroku's provided ports
+app.listen(port, () => {
+    console.log("Server running at http://localhost:"+port);
 });

@@ -11,7 +11,7 @@ weatherForm.addEventListener('submit', (e) => {
         console.log("You must provide a location");
     }
     else {
-        fetch('http://localhost:2244/weather?address='+encodeURIComponent(location))
+        fetch('/weather?address='+encodeURIComponent(location))
         .then((response) => {
             response.json()
             .then((data) => {
