@@ -5,13 +5,15 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/app.js"
+    "start": "node src/app.js -e js,hbs"
   },
   "author": "dipanshu",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
+    "hbs": "^4.0.1",
     "handlebars": "^4.5.1",
+    "nodemon": "^1.19.4",
     "request": "^2.88.0"
   }
 }
